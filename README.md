@@ -114,9 +114,9 @@ These are known characteristics of the dataset, not analytical shortcomings — 
 | Stage | Status |
 |---|---|
 | 1 — EDA & exploration | ✅ Complete |
-| 2 — dbt architecture | 🔄 In progress |
-| 3 — Staging models | ⬜ Pending |
-| 4 — Dimension & fact models | ⬜ Pending |
-| 5 — Analytics marts | ⬜ Pending |
+| 2 — dbt architecture | ✅ Complete |
+| 3 — Staging models | ✅ Complete |
+| 4 — Dimension & fact models | ✅ Complete |
+| 5 — Analytics marts | 🔄 In progress |
 | 6 — Tableau dashboard | ⬜ Pending |
 | 7 — Documentation & publish | ⬜ Pending |
