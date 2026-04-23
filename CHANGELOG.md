@@ -4,6 +4,19 @@ All notable changes to this project are documented here.
 
 ---
 
+## [0.3.0] — 2026-04-23
+
+### Added
+- Dimensions layer — 4 models: `dim_dates`, `dim_customers`, `dim_sellers`, `dim_products`
+- Facts layer — 4 models: `fct_orders`, `fct_order_items`, `fct_payments`, `fct_reviews`
+- 112 dbt tests passing across staging, dimensions and facts layers
+
+### Fixed
+- `dim_customers` deduplicated by `customer_unique_id` to resolve 2,997 duplicate rows
+- `fct_orders` joined to `stg_customers` directly to resolve null `customer_unique_id` on multi-order customers
+
+---
+
 ## [0.2.0] — 2026-04-23
 
 ### Added
