@@ -4,6 +4,17 @@ All notable changes to this project are documented here.
 
 ---
 
+## [0.2.0] — 2026-04-23
+
+### Added
+- dbt project setup (`ecommerce_olist/`) with Postgres connection
+- Raw data loading script (`exploration/load_raw_data.py`) — 9 tables into `raw` schema
+- Staging layer — 8 models: `stg_orders`, `stg_order_items`, `stg_payments`,
+  `stg_reviews`, `stg_customers`, `stg_sellers`, `stg_products`, `stg_geolocation`
+- 64 dbt tests passing across staging layer
+
+---
+
 ## [0.1.0] — 2026-04-21
 
 ### Added
