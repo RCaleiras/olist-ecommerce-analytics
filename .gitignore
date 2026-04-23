@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Dados — nunca entram no repo
+data/
+datasets/
+*.csv
+*.parquet
+*.xlsx
+
+# dbt
+dbt_project/profiles.yml
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Outputs locais
+olist_eda_report.txt
+olist_eda_plots.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
