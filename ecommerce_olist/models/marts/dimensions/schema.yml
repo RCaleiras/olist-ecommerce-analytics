@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dim_dates
+    description: "Date dimension covering the effective analysis period 2017-01-01 to 2018-08-31."
+    columns:
+      - name: date
+        description: "Primary key."
+        tests: [not_null, unique]
+      - name: year
+        tests: [not_null]
+      - name: month
+        tests: [not_null]
+      - name: quarter
+        tests: [not_null]
+      - name: is_weekend
+        tests: [not_null]
+      - name: is_weekday
+        tests: [not_null]
+
+  - name: dim_customers
+    description: "One row per customer_unique_id. customer_unique_id is the true customer identifier across orders."
+    columns:
+      - name: customer_unique_id
+        description: "Primary key. True customer identifier."
+        tests: [not_null, unique]
+      - name: customer_id
+        description: "Order-scoped customer identifier. FK to stg_orders."
+        tests: [not_null]
+      - name: customer_state
+        tests: [not_null]
+      - name: first_order_date
+        tests: [not_null]
+
+  - name: dim_sellers
+    description: "One row per seller enriched with geolocation coordinates."
+    columns:
+      - name: seller_id
+        description: "Primary key."
+        tests: [not_null, unique]
+      - name: seller_state
+        tests: [not_null]
+
+  - name: dim_products
+    description: "One row per product with English category name and physical dimensions."
+    columns:
+      - name: product_id
+        description: "Primary key."
+        tests: [not_null, unique]
+      - name: product_category_name_en
+        tests: [not_null]
